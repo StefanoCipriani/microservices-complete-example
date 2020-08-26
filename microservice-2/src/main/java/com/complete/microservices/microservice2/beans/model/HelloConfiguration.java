@@ -1,21 +1,11 @@
-package com.complete.microservices.microservice1.beans.model;
+package com.complete.microservices.microservice2.beans.model;
 
-import java.io.Serializable;
+public class HelloConfiguration {
 
-public class HelloConfiguration implements Serializable{
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private String message;
 	private String description;
 	private String port;
 	
-	public HelloConfiguration() {
-		
-	}
-
 	public HelloConfiguration(String message, String description, String port) {
 		this.message=message;
 		this.description=description;

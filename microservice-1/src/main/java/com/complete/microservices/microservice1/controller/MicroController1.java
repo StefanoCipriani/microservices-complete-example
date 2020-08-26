@@ -1,6 +1,7 @@
 package com.complete.microservices.microservice1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +16,14 @@ public class MicroController1 {
 	@Autowired
 	private Configuration configuration;
 	
+	@Autowired
+	private Environment env;
+	
 	@GetMapping("hello")
     public ResponseEntity<HelloConfiguration> getHello(){
-        return new ResponseEntity<HelloConfiguration>(new HelloConfiguration(configuration.getMessage(), configuration.getDescription()), HttpStatus.OK);
-    }
+        return new ResponseEntity<HelloConfiguration>(
+        		new HelloConfiguration(configuration.getMessage(), configuration.getDescription(), env.getProperty("local.server.port")),
+        		HttpStatus.OK);
+    }  
 
 }

@@ -2,7 +2,9 @@ package com.complete.microservices.microservice0;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
+@EnableFeignClients("com.complete.microservices.microservice0")
 @SpringBootApplication
 public class Microservice0Application {
 
