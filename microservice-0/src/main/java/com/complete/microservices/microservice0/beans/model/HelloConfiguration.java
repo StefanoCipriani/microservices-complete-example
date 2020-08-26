@@ -1,14 +1,14 @@
-package com.complete.microservices.microservice1.configurations;
+package com.complete.microservices.microservice0.beans.model;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-@Component
-@ConfigurationProperties("microservice1.hello")
-public class Configuration {
+public class HelloConfiguration {
 
 	private String message;
 	private String description;
+	
+	public HelloConfiguration(String message, String description) {
+		this.message=message;
+		this.description=description;
+	}
 	
 	public String getMessage() {
 		return message;
