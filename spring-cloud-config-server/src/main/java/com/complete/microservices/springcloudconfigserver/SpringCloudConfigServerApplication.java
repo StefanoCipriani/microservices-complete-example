@@ -1,13 +1,13 @@
-package com.complete.microservices.microservice2;
+package com.complete.microservices.springcloudconfigserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Microservice2Application {
+public class SpringCloudConfigServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Microservice2Application.class, args);
+		SpringApplication.run(SpringCloudConfigServerApplication.class, args);
 	}
 
 }
