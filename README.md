@@ -20,14 +20,14 @@ Ribbon ask to him when need of a particular microservice.
 	
 ## Project description
 In our example there are:
-* microservice-0:
+* **microservice-0**:
 	running on port 9000 has ribbon/feign configured and calls microservice-1 
-* microservice-1:
+* **microservice-1**:
 	simple microservice exposing some rest
-* microservice-2:
+* **microservice-2**:
 	simple microservice exposing some rest
-* microservice-naming-server:
+* **microservice-naming-server**:
 	eureka server that contains all microservices running instances
-* spring-cloud-config-server:
+* **spring-cloud-config-server**:
 	provides configuration properties for all the microservices above. 
 	It as priority against application.properties file of specific microservice
